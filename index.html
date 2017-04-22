@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Phaser - SPINNER</title>
+	<link rel="icon" href="assets/icon-site.png">
+
+	<script type="text/javascript" src="js/phaser.min.js"></script>
+
+	<style>
+		body {
+			margin: 0;
+			background: #000000;
+		}
+
+
+	</style>
+
+</head>
+<body>
+		<div id="joystick"></div>
+
+</body>
+
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+<script type="text/javascript" src="js/phaser-input.js"></script>
+<script type="text/javascript" src="js/phaser-nineslice.js"></script>
+<script type="text/javascript" src="js/nipplejs.js"></script>
+<script type="text/javascript" src="js/phase-slide.js"></script>
+<script type="text/javascript" src="js/phaser.min.js"></script>
+<script type="text/javascript" src="js/socket.js"></script>
+<script type="text/javascript" src="js/player.js"></script>
+<script type="text/javascript" src="js/bola.js"></script>
+<script type="text/javascript" src="js/obstaculo.js"></script>
+<script type="text/javascript" src="js/popup.js"></script>
+<script type="text/javascript" src="js/speaker.js"></script>
+<script type="text/javascript" src="js/loading.js"></script>
+<script type="text/javascript" src="js/preload.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="js/levelSelect.js"></script>
+<script type="text/javascript" src="js/jogo.js"></script>
+<script type="text/javascript" src="js/fim.js"></script>
+<script type="text/javascript">
+
+	 (function() {
+        var game = new Phaser.Game(JOGO.area.largura, JOGO.area.altura, Phaser.CANVAS, 'game');
+            
+            // -- criação dos estados do jogo
+            game.state.add('loading', JOGO.loading);
+            game.state.add('preload', JOGO.preload);
+            game.state.add('menu', JOGO.menu);
+            game.state.add('levelSelect', JOGO.levelSelect);
+            game.state.add('jogo', JOGO.jogo);
+            game.state.add('fim', JOGO.fim);
+            
+            game.state.start('loading');
+
+    })();
+
+</script>
+
+</html>
